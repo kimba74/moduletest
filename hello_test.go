@@ -5,6 +5,13 @@ import (
 	"testing"
 )
 
+func TestHelloEmpty(t *testing.T) {
+	want := "Hello, world!"
+	if got := Hello(""); got != want {
+		t.Errorf(fmt.Sprintf("Hello(\"\")=%q; want %q", got, want))
+	}
+}
+
 func TestHelloWorld(t *testing.T) {
 	want := "Hello, world!"
 	if got := HelloWorld(); got != want {
