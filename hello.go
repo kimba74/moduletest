@@ -2,6 +2,7 @@ package moduletest
 
 import (
 	"fmt"
+	"strings"
 )
 
 type stringer interface {
@@ -14,7 +15,9 @@ func Hello(name interface{}) (string, bool) {
 	if name != nil {
 		switch s := name.(type) {
 		case string:
-			greet = s
+			if strings.TrimSpace(s) != "" {
+				greet = s
+			}
 		case stringer:
 			greet = s.String()
 		default:
