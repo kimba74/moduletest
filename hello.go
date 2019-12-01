@@ -13,3 +13,8 @@ func Hello(name string) string {
 	}
 	return fmt.Sprintf("Hello, %s!", greet)
 }
+
+// HelloWorld says hello to the world
+func HelloWorld() string {
+	return Hello("")
+}

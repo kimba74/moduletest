@@ -7,7 +7,7 @@ import (
 
 func TestHelloWorld(t *testing.T) {
 	want := "Hello, world!"
-	if got := Hello(""); got != want {
+	if got := HelloWorld(); got != want {
 		t.Errorf(fmt.Sprintf("Hello(\"\")=%q; want %q", got, want))
 	}
 }
